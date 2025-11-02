@@ -14,7 +14,7 @@ class LLMClient:
     
     def __init__(
         self,
-        api_url: str = "http://122.115.55.3:32800/v1/chat/completions",
+        api_url: str = "http://12.11.5.3:3200/v1/chat/completions",
         model: str = "Qwen3_2507",
         timeout: int = 1200,
         max_retries: int = 3
