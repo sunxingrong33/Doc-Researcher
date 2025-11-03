@@ -1,0 +1,141 @@
+.meme-gallery {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  min-height: 400px;
+}
+
+.meme-gallery h2 {
+  font-size: 1.75rem;
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+}
+
+.loading,
+.error,
+.empty-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--gray);
+}
+
+.empty-state p {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.empty-state .hint {
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+.memes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.meme-card {
+  background: var(--white);
+  border: 2px solid var(--light-gray);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.meme-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.meme-image-container {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--light-gray);
+}
+
+.meme-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.meme-info {
+  padding: 1.25rem;
+}
+
+.meme-title {
+  font-size: 1.25rem;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.meme-texts {
+  margin-bottom: 0.75rem;
+}
+
+.meme-text {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-bottom: 0.25rem;
+  word-wrap: break-word;
+}
+
+.meme-text strong {
+  color: var(--dark);
+}
+
+.meme-date {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+.meme-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 0.65rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.action-btn:hover {
+  transform: scale(1.05);
+}
+
+.download-btn {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.download-btn:hover {
+  background: var(--primary-dark);
+}
+
+.delete-btn {
+  background: var(--error);
+  color: var(--white);
+}
+
+.delete-btn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .memes-grid {
+    grid-template-columns: 1fr;
+  }
+}
